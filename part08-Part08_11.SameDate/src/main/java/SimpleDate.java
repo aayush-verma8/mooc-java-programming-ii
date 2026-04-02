@@ -50,5 +50,16 @@ public class SimpleDate {
 
         return this.year - other.year - yearRemoved;
     }
-
+    public boolean equals(Object object){
+        if(object==null || this.getClass()!=object.getClass()){
+            return false;
+        }
+        if(this==object){
+        return true;
+        }
+        SimpleDate other=(SimpleDate) object;
+        return this.day==other.day &&
+                this.month==other.month&&
+                this.year==other.year;
+    }
 }
